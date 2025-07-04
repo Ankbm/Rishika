@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎂 Blow the Candles</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #e60073;
+      font-size: 2.5em;
+    }
+
+    .cake {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      font-size: 1.2em;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #e60073;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Make a Wish and Blow the Candles! 🕯️</h1>
+  <img id="cake" class="cake" src="https://i.ibb.co/6PD0Ksj/cake-with-candles.png" alt="Birthday Cake with Candles" />
+  <button class="btn" onclick="blowCandles()">🎉 Blow Candles</button>
+
+  <audio id="song" class="hidden" autoplay controls>
+    <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function blowCandles() {
+      const cakeImg = document.getElementById('cake');
+      cakeImg.src = "https://i.ibb.co/JFkp1mM/cake-no-candles.png"; // cake without candles
+      document.getElementById('song').classList.remove('hidden');
+      document.getElementById('song').play();
+    }
+  </script>
+</body>
+</html>
